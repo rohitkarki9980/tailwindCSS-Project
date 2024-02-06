@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-     <div>
-      <div>
-        <nav>
-          <div>
-            <h1>
-              <a href="/">Tailwind</a>
-            </h1>
-          </div>
-          <ul>
-            <li>
-              <a href="#">
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>Home</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <link href="/public/styles.css" rel="stylesheet">
+    
+  </head>
+  <body class="bg-black">
+    <main>
+      <h1
+        class="w-auto bg-slate-500 text-center border-black border-2 rounded-md font-mono my-2 py-2"
+      >
+        Tail wind css
+      </h1>
+      <!-- Layout -->
+      <div class="fixed w-10 h-10 bg-red-400 top-0"></div>
+      <div class="flex flex-wrap space-x-10">
+        <div class="w-16 h-16 bg-blue-500 rounded-full">1</div>
+        <div class="w-16 h-16 bg-blue-500 rounded-full">2</div>
+        <div class="w-16 h-16 bg-blue-500 rounded-full">3</div>
+        <div class="w-16 h-16 bg-blue-500 rounded-full">4</div>
+        <div class="w-16 h-16 bg-blue-500 rounded-full">5</div>
       </div>
-      <main>
-        <div>
-          <a href=""> Log in </a>
-          <a href=""> Sign up </a>
-        </div>
-        <header>
-          <h2>Docs</h2>
-          <h3>Version</h3>
-        </header>
-        <div>
-          <h4>Latest updates</h4>
-          <div>
-            <div>
-              <img src=" " alt="" />
-              <div>
-                <span>v1</span>
-                <span>v2</span>
-              </div>
-            </div>
-          </div>
-          <h4>Most Popular</h4>
-          <div>
-            <!-- cards goes here -->
-          </div>
-          <div>
-            <div>
-                Load More
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-</body>
+      <div class="grid grid-cols-3 gap-2 mt-3">
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+        <div class="bg-violet-500 h-12"></div>
+      </div>
+      <!-- Media queries -->
+      <div class="md:block hidden">
+        <p>hello i will appear > 768px</p>
+      </div>
+
+      <div class="max-md:block hidden">
+        <p>heloo i will appear < 768px</p>
+      </div>
+
+      <button
+        class="my-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-1 active:bg-blue-800"
+      >
+        Click here
+      </button>
+      <ul class="my-2 space-y-2">
+        <li class="bg-white p-2 first:bg-yellow-100">Item 1</li>
+        <li
+          class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200"
+        >
+          Item 2
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200"
+        >
+          Item 3
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200"
+        >
+          Item 4
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200"
+        >
+          Item 5
+        </li>
+        <li
+          class="bg-white p-2 first:bg-yellow-100 odd:bg-blue-200 even:bg-green-200"
+        >
+          Item 6
+        </li>
+      </ul>
+      <!-- dark theme -->
+      <div
+        class="m-10 rounded-lg px-6 py-8 shadow-xl ring-1 ring-slate-400 dark:bg-black"
+      >
+        <h3
+          class="text-base font-medium tracking-tight text-slate-900 dark:text-blue-400"
+        >
+          Text
+        </h3>
+        <p class="dark:text-white">This is a paragrpah</p>
+        <button
+          id="toggleDark"
+          class="text-blue-900 bg-blue-100 px-4 py-5 text-sm font-medium rounded-md"
+          onclick="document.body.classList.toggle('dark')"
+        >
+          Toggle Dark button
+        </button>
+      </div>
+    </main>
+  </body>
 </html>
